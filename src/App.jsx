@@ -33,7 +33,7 @@ export default function App() {
 
         if (query.trim().length < 3) {
           const res = TOP_RATED_IDS.map((id) =>
-            fetch(`http://www.omdbapi.com/?apikey=${APP_KEY}&i=${id}`, {
+            fetch(`https://www.omdbapi.com/?apikey=${APP_KEY}&i=${id}`, {
               signal: controller.signal,
             }).then((topmovie) => topmovie.json()),
           );
@@ -45,7 +45,7 @@ export default function App() {
           setMovies(data);
         } else {
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${APP_KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${APP_KEY}&s=${query}`,
             { signal: controller.signal },
           );
           if (!res.ok) throw new Error("Something went wrong");
