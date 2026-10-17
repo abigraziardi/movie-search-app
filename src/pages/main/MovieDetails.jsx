@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { APP_KEY } from "../../API/constants";
-import Loader from "../Handler/Loader";
+import Loader from "../../components/Handler/Loader";
 
 export default function MovieDetails({ selectedId, onCloseMovie }) {
   const [isLoading, setIsLoading] = useState(false);

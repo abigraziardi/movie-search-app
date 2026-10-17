@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { APP_KEY, TOP_RATED_IDS } from "./API/constants";
 import Loader from "./components/Handler/Loader";
 import ErrorMessage from "./components/Handler/ErrorMessage";
-import Header from "./components/Header";
+import Header from "./pages/header/Header";
 import Search from "./components/Search";
-import Main from "./components/Main/Main";
-import MovieList from "./components/Main/MovieList";
-import MovieDetails from "./components/Main/MovieDetails";
-import Footer from "./components/Footer";
+import Main from "./pages/main/Main";
+import MovieList from "./pages/main/MovieList";
+import MovieDetails from "./pages/main/MovieDetails";
+import Footer from "./pages/footer/Footer";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
