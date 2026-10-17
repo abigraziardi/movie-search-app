@@ -31,7 +31,7 @@ export default function MovieDetails({ selectedId, onCloseMovie }) {
   }, [selectedId]);
 
   return (
-    <div className="details">
+    <section className="details">
       {isLoading ? (
         <Loader />
       ) : (
@@ -72,7 +72,7 @@ export default function MovieDetails({ selectedId, onCloseMovie }) {
               </div>
             </div>
 
-            <section className="p-4 flex flex-col gap-2 text-slate-50 md:text-lg">
+            <div className="p-4 flex flex-col gap-2 text-slate-50 md:text-lg">
               <p className="mb-5 mt-3">
                 <em>{plot}</em>
               </p>
@@ -85,10 +85,10 @@ export default function MovieDetails({ selectedId, onCloseMovie }) {
               <p className="font-semibold">
                 Directed by: <span className="font-normal">{director}</span>
               </p>
-            </section>
+            </div>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }
